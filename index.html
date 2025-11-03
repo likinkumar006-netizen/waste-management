@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CompliCycle: Verifiable EPR Compliance</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            'brand-green': '#10b981',
+            'brand-dark': '#0f172a',
+            'brand-light': '#f0fdf4',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .compliance-gradient {
+      background: linear-gradient(135deg, #0f172a 0%, #10b981 100%);
+    }
+    .spinner {
+      border: 4px solid rgba(255,255,255,0.3);
+      border-top: 4px solid #fff;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      animation: spin 1s linear infinite;
+      display: none;
+    }
+    @keyframes spin { 0%{transform:rotate(0deg);} 100%{transform:rotate(360deg);} }
+  </style>
+</head>
+<body class="font-sans bg-brand-light text-brand-dark">
+
+  <!-- Header -->
+  <header class="p-4 shadow-md bg-white sticky top-0 z-10">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-brand-dark">CompliCycle</h1>
+      <nav class="hidden md:block space-x-6">
+        <a href="#compliance" class="hover:text-brand-green transition">B2B Compliance</a>
+        <a href="#community" class="hover:text-brand-green transition">Community App</a>
+        <a href="#ai-tools" class="hover:text-brand-green transition">AI Tools</a>
+        <a href="#risk" class="hover:text-brand-green transition">Risk Mitigation</a>
+      </nav>
+      <a href="#cta-form" class="bg-brand-green text-white px-4 py-2 rounded-lg hover:bg-emerald-600 shadow-md">Book Audit</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="compliance-gradient text-white py-16">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">India's First Verified B2B Waste Marketplace</h2>
+      <p class="text-xl md:text-2xl mb-8 text-gray-200 max-w-4xl mx-auto">
+        <b>Guaranteed CPCB Compliance and Audit Readiness.</b>
+        Digitize your EPR liability, reduce risk, and secure a verifiable supply chain instantly.
+      </p>
+      <a href="#cta-form" class="inline-block bg-white text-brand-dark text-xl font-bold px-10 py-4 rounded-xl hover:bg-gray-200 transition hover:scale-105 shadow-2xl">Get My Free Audit</a>
+    </div>
+  </section>
+<form action="https://formspree.io/f/mzzkoppn" method="POST" id="book-audit-form">
+  <div class="mb-4">
+    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+    <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg" required>
+  </div>
+  <div class="mb-4">
+    <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Company Name (PIBO)</label>
+    <input type="text" id="company" name="company" class="w-full px-4 py-2 border border-gray-300 rounded-lg" required>
+  </div>
+  <div class="mb-4">
+    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Work Email</label>
+    <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg" required>
+  </div>
+  <div class="mb-6">
+    <label for="waste-type" class="block text-sm font-medium text-gray-700 mb-1">Primary Waste Stream</label>
+    <select id="waste-type" name="waste-type" class="w-full px-4 py-2 border border-gray-300 rounded-lg" required>
+      <option value="">Select Waste Type</option>
+      <option value="plastic">Plastic Packaging</option>
+      <option value="ewaste">E-Waste / Electronics</option>
+      <option value="battery">Battery Waste</option>
+      <option value="tyre">Tyre Waste</option>
+      <option value="other">Other/Consultation</option>
+    </select>
+  </div>
+  <button type="submit" class="w-full bg-brand-dark text-white font-bold py-3 rounded-lg hover:bg-gray-800">
+    Quick Compliance Scan
+  </button>
+</form>
+  <!-- Features -->
+  <section id="compliance" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <h3 class="text-3xl md:text-4xl font-bold text-center mb-12">The CompliCycle Digital Moat</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-brand-light p-6 rounded-xl shadow-lg border-t-4 border-brand-green">
+          <h4 class="text-xl font-semibold mb-3">100% CPCB-Integrated Reporting</h4>
+          <p class="text-gray-600">Automate your EPR annual and quarterly filings directly to the CPCB portal. Eliminate manual data entry, reduce human error, and stay ahead of regulatory deadlines effortlessly.</p>
+        </div>
+        <div class="bg-brand-light p-6 rounded-xl shadow-lg border-t-4 border-brand-green">
+          <h4 class="text-xl font-semibold mb-3">Vetted Recycler Moat</h4>
+          <p class="text-gray-600">Access an exclusive network of CPCB-authorized recyclers and processors. We handle vendor due diligence so your fulfillment is always verifiable, secure, and audit-ready.</p>
+        </div>
+        <div class="bg-brand-light p-6 rounded-xl shadow-lg border-t-4 border-brand-green">
+          <h4 class="text-xl font-semibold mb-3">End-to-End Traceability</h4>
+          <p class="text-gray-600">Our platform tracks every gram of waste from your location to the final recycling facility, providing a <b>Digital Chain of Custody (DCoC)</b> that minimizes fraud and risk.</p>
+        </div>
+      </div>
+    </div>
+  </section>          
+            <div>
+              
+        </div>
+         </section>
+
+  <!-- Risk Mitigation Section -->
+  <section id="risk" class="py-16 compliance-gradient text-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <h3 class="text-3xl md:text-4xl font-bold text-center mb-12">The True Cost of Non-Compliance is Reputational Risk</h3>
+      <div class="flex flex-col md:flex-row items-center gap-10 bg-brand-dark p-8 rounded-xl shadow-2xl">
+        <div class="md:w-1/2">
+          <p class="text-lg mb-4 text-gray-200">The biggest challenge in waste management isn't logistics; it's <b>trust</b>. Relying on informal or unverified vendors exposes your brand to massive penalties and harms your ESG score.</p>
+          <ul class="space-y-3 list-none">
+            <li><b>Mitigate Legal Fines:</b> Secure evidence for every compliance target.</li>
+            <li><b>Improve ESG Reporting:</b> Generate audit-ready sustainability metrics instantly.</li>
+            <li><b>Cut Procurement Time:</b> Compare prices from multiple verified recyclers on a single dashboard.</li>
+          </ul>
+        </div>
+        <div class="md:w-1/2 mt-6 md:mt-0">
+          <div class="bg-gray-800 rounded-lg p-6 text-center h-full flex flex-col justify-center items-center">
+            <p class="text-lg font-semibold">Watch our  Compliance Pitch Video Here</p>
+            <a href="http://www.youtube.com/watch?v=Z1xsg00LGis">Click Here</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><form action="https://formspree.io/f/{https://formspree.io/f/mzzkoppn}" method="POST">
+<script>
+  // Show thank you message on successful form submission (without redirect)
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var form = e.target;
+    var data = new FormData(form);
+
+    fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        form.style.display = 'none';
+        document.getElementById('thankyou-message').style.display = 'block';
+      } else {
+        response.json().then(data => {
+          alert('Oops! There was a problem submitting your form');
+        });
+      }
+    }).catch(error => {
+      alert('Oops! There was a problem submitting your form');
+    });
+  });
+</script>
+<div id="thankyou-message" style="display:none; color:green; margin-top:1.5rem; font-size:1.2em;">
+  Thank you for your submission! We’ll get back to you soon.
+</div>
+
+<script>
+  document.getElementById('book-audit-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var form = e.target;
+    var data = new FormData(form);
+
+    fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        form.reset();
+        form.style.display = 'none';
+        document.getElementById('thankyou-message').style.display = 'block';
+      } else {
+        alert('Oops! There was a problem submitting your form.');
+      }
+    }).catch(error => {
+      alert('Oops! There was a problem submitting your form.');
+    });
+  });
+</script>
+
+  <!-- CTA Form -->
+  <section id="cta-form" class="py-16 bg-brand-light">
+    <div class="max-w-md mx-auto px-6 bg-white p-8 rounded-xl shadow-2xl border-t-4 border-brand-dark">
+      <h3 class="text-3xl font-bold text-center mb-4 text-brand-dark">Secure Your Supply Chain Today</h3>
+      <p class="text-center text-gray-600 mb-6">Book a quick, personalized consultation with our EPR specialists.</p>
+      <form>
+        <div class="mb-4">
+          <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+          <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg" placeholder="Your Name" required>
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Your Email</label>
+          <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg" placeholder="Example@gmail.com" required>
+        </div>
+        <div class="mb-6">
+          <label for="waste-type" class="block text-sm font-medium text-gray-700 mb-1">Primary Waste Stream</label>
+          <select id="waste-type" name="waste-type" class="w-full px-4 py-2 border border-gray-300 rounded-lg" required>
+            <option value="">Select Waste Type</option>
+            <option value="plastic">Plastic Packaging</option>
+            <option value="ewaste">E-Waste / Electronics</option>
+            <option value="battery">Battery Waste</option>
+            <option value="tyre">Tyre Waste</option>
+            <option value="other">Other/Consultation</option>
+          </select>
+        </div>
+        <button type="submit" class="w-full bg-brand-dark text-white font-bold py-3 rounded-lg hover:bg-gray-800">
+          Submit
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-brand-dark text-gray-400 py-8">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="mb-2">© 2025 CompliCycle | B2B Compliance-as-a-Service (CaaS) Platform</p>
+      <p class="text-sm">Partnered with CPCB-Authorized Recyclers for Verifiable EPR Fulfillment.</p>
+    </div>
+  </footer>
+
+  <script>
+    // DEMO: Returns sample/dummy content for all AI features unless you insert a real Gemini API key
+    document.addEventListener('DOMContentLoaded', function() {
+      // --- AI Compliance Assistant Logic ---
+      document.getElementById('run-ai-query').addEventListener('click', function() {
+        let output = document.getElementById('ai-response-output');
+        let input = document.getElementById('ai-query').value.trim();
+        output.innerHTML = "<p class='text-brand-green'>DEMO: 90% target for rigid plastic by 2027-28.<br>(Add Gemini API key for live answers)</p>";
+      });
+      // --- Executive Report Drafter Logic ---
+      document.getElementById('generate-report-button').addEventListener('click', function() {
+        let output = document.getElementById('report-output');
+        let input = document.getElementById('risk-assessment-input').value.trim();
+        output.innerHTML = "<p class='text-brand-dark p-3'>DEMO: Risk identified. CompliCycle's Digital CaaS is mandatory to avoid fines and save costs.<br>(Add Gemini API for live summary.)</p>";
+      });
+      // --- Waste Identifier Logic ---
+      document.getElementById('run-waste-identifier').addEventListener('click', function() {
+        let output = document.getElementById('identifier-output');
+        let input = document.getElementById('waste-identifier-input').value.trim();
+        output.textContent = "DEMO: Likely Category - Mixed Plastic Waste. (Add Gemini API for live category)";
+      });
+      // --- Eco Tip Logic ---
+      document.getElementById('run-eco-tip').addEventListener('click', function() {
+        let output = document.getElementById('tip-output');
+        output.textContent = '"DEMO: Carry your own cloth bag to reduce single-use plastics." (Add Gemini API for daily tip)';
+      });
+    });
+  </script>
+</body>
+</html>
